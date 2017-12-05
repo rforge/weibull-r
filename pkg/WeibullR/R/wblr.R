@@ -2,7 +2,7 @@
 # Inspired by Abrem.R originally written by Jurgen Symynck
 # Extensive re-write by David J. Silkworth includes:
 #	interval input argument
-#	new [object]$data now as list containing objects rlq_frame, dpoints, and dlines
+#	new [object]$data now as list containing objects lrq_frame, dpoints, and dlines
 #   the [object]$data$dpoints corresponds to previous [object]$data
 # copyright (c) OpenReliability.org 2011-2017
 #-------------------------------------------------------------------------------
@@ -198,3 +198,16 @@ getPlotData<-function(x,opa) {
 outlist<-list(dpoints,dlines)				
 outlist 				
 }				
+
+
+splitargs <- function(...){
+    arg         <- list(...)
+    argnames    <- names(arg)
+    parplot     <- plot_default_args()
+    ret         <- list()
+    opanames    <- names(options.wblr())
+    ret$opa     <- arg[tolower(argnames) %in% tolower(opanames)]
+        # ret$opa can be an emply list, which is compatible with modifyList()
+    ret$rem     <- arg[!(tolower(argnames) %in% tolower(opanames))]
+    ret
+}
