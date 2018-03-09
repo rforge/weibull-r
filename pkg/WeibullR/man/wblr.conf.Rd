@@ -68,9 +68,6 @@
 				\item{\code{S}}{
 					The number of samples to be run during pivotal analysis, default is \code{1e4}.
 				}
-				\item{\code{pivotals}}{
-					Not sure this is used, but default is \code{FALSE}.
-				}
 			}
 		}
 		\item{Specific controls for likelihood ratio contour and bounds only}{
@@ -101,7 +98,13 @@ Additionally, graphical control options for the confidence interval bounds can b
     as passed to the function.
 }
 
+\references{
+  William Q. Meeker and Luis A. Escobar, (1998) "Statistical Methods for Reliability Data", Wiley-Interscience, New York
 
+  Robert B. Abernethy, (2008) "The New Weibull Handbook, Fifth Edition" 
+  
+  John I. McCool, (2012) "Using the Weibull Distribution: Reliability, Modeling and Inference"
+}
 
 \examples{
 ## full dataset ##
@@ -128,14 +131,4 @@ da2 <- wblr.conf(da2,method.conf="lrb",col="cyan3")
 \dontrun{
 plot(da2,main="Comparison between different bound types with right-censored data.")
 }
-}
-
-
-\references{
-  William Q. Meeker and Luis A. Escobar, (1998) "Statistical Methods for Reliability Data", 
-  Wiley-Interscience, New York
-
-  Robert B. Abernethy, (2008) "The New Weibull Handbook, Fifth Edition" 
-  
-  John I. McCool, (2012) "Using the Weibull Distribution: Reliability, Modeling and Inference"
 }

@@ -2,7 +2,7 @@
 \alias{options.wblr}
 
 \title{
-    Options for \code{wblr} Objects
+    Options list for \code{wblr} Objects
 }
 \description{
     This function handles the various calculation, printing and plotting options
@@ -186,9 +186,6 @@ Options specific to \code{\link{wblr.conf}}
 				}
 				\item{\code{S}}{
 					The number of samples to be run during pivotal analysis, default is \code{1e4}.
-				}
-				\item{\code{pivotals}}{
-					Not sure this is used, but default is \code{FALSE}.
 				}
 			}
 		}
