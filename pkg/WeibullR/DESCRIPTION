@@ -10,7 +10,6 @@ License: GPL (>=3)
 Copyright: copyright (c) OpenReliability.org 2011-2018
 URL: http://www.openreliability.org/weibull-r-weibull-analysis-on-r/
 LazyLoad: yes
-SystemRequirements: C++11
 Imports: Rcpp (>= 0.11.1)
 LinkingTo: Rcpp, RcppArmadillo
 
